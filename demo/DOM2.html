@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM基础</title>
+</head>
+<body>
+<ul class="ct">
+  <li>这里是</li>
+  <li>饥人谷</li>
+  <li>任务班</li>
+  </ul>
+  <input class="ipt-add-content" placeholder="添加内容"/>
+  <button id="btn-add-start">开头添加</button>
+  <button id="btn-add-end">结尾添加</button>
+  <p>运用知识点：1.封装一个函数用来获取相对于的DOM-node,简约代码，节省资源 2.addEventListenner事件 3.创建元素document.createElement 4.在Dom元素尾部动态添加元素appendChild 5.在DOM元素中动态插入元素insertBefore(头部-firstChild) </p>
+<script>
+// 封装一个函数，用来获取相对应的DOM-node
+function $(ele){
+	if(document.querySelectorAll(ele).length>1){
+		return document.querySelectorAll(ele)
+	}
+	else{
+		return document.querySelector(ele)
+	}
+}
+
+
+var star=$('#btn-add-start');
+var end=$('#btn-add-end');
+var content=$('.ipt-add-content');
+var ct=$('.ct');
+var li=$('.ct>li');
+
+
+
+// 点击尾部添加
+
+end.addEventListener('click',function(){
+	var li=document.createElement('li');
+	ct.appendChild(li);
+	li.innerText=content.value;
+	content.value='';  //归零清空输入框内容
+})
+
+// 点击头部添加
+
+star.addEventListener('click',function(){
+	var li=document.createElement('li');
+	ct.insertBefore(li,ct.firstChild);
+	li.innerText=content.value;
+	content.value='';
+})
+
+// 点击console文本内容
+li.forEach(function(ele){
+	ele.addEventListener('click',function(){
+		console.log(ele.innerText)
+	})
+
+})
+
+
+
+
+
+
+//todo ...
+// var li=document.querySelectorAll('.ct>li');
+
+// for(var i=0;i<li.lenght;i++){
+// 	li[i].addEventListener('click',function(){
+// 		console.log(this.innerText)
+// 	})
+// }
+// console.log(li)
+
+
+
+
+// function $(e){
+//         if(document.querySelectorAll(e).length > 1){
+//             return document.querySelectorAll(e);
+//         }else{
+//             return document.querySelector(e);
+//         }
+//     }
+
+// var li = $('li')
+//     for(var i = 0; i < li.length; i ++){
+//     	li[i].addEventListener('click', function(){
+//     		console.log(this.innerText)
+//     	})
+//     }
+
+
+ 
+  
+  //你的代码
+  
+
+</script>
+	
+</body>
+</html>

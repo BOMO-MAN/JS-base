@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件</title>
+</head>
+<input type="button" value="Click Here" onclick="alert('Clicked!')">
+<input type="button" value="Click Here" onclick="alert('Clicked!');" />
+
+<input id="btnClick" type="button" value="Click Here2">
+<body>
+<script>
+	// DOM一级事件监听方法
+	// var btnClick=document.getElementById('btnClick');
+	// btnClick.onclick=function shoeMessage(){
+	// 	alert(this.id);
+	// }
+
+	// DOM2事件监听方法
+
+	var btnClick=document.getElementById('btnClick');
+	btnClick.addEventListener('click',function(){
+		alert(this.id);
+	})
+
+
+
+	
+</script>
+	
+</body>
+</html>

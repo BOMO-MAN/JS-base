@@ -1,0 +1,106 @@
+<script>
+
+	Math.max(23,1,-9,56);
+	Math.min(23,1,-9,56);
+	Math.random();
+	Math.round(4.5);
+	Math.round(-4.5);
+	Math.abs(-34);
+	Math.floor(4.6);
+	Math.ceil(4.6);
+	Math.pow(2,2)
+	Math.sqrt(4)
+	
+
+	var arr=[1,2,3,4,4,6,7,8,7,8];
+	Math.max.apply(null,arr);
+
+	Math.E;
+	console.log(Math.pi);
+
+
+	// 用的最多的是random
+
+	console.log(Math.random());
+
+	
+	// [min,max)的随机整数
+	function getRandom(min,max) {
+		return Math.floor(Math.random()*(max-min))+min;
+	}
+	var fun=getRandom(1,10);
+	console.log(fun);
+
+	function test1(){
+		var arr=[];
+		for (var i=0;i<20;i++){
+			arr.push(fun);
+		}
+		return arr;
+	}
+	console.log(test1())
+
+	function getRandom1(min,max){
+		return Math.floor(Math.random()*(max-min+1))+min;
+
+	}
+	console.log(getRandom1(1,6))
+
+	// 随机字符串
+	function StrRandom(len) {
+		var sqrt="abcdefghijklmnopqrstuvwsyz0123456789";
+		var result="";
+		for(var i=0;i<len;i++){
+			result+=sqrt[Math.floor(Math.random()*36)]
+		}
+		return result;
+
+	}
+	console.log(StrRandom(10));
+	console.log(StrRandom(6));
+	function loop1(){
+		for(var i=0;i<10;i++){
+			console.log(StrRandom(10))
+		}
+	}
+	console.log(loop1());
+
+	// 随机IP地址
+	function getRanIP(){
+		var a=[];
+		for(var i=0;i<4;i++){
+			a.push(Math.floor(Math.random()*256));
+		}
+		var IP =a.join('.');
+		return IP;
+	}
+	console.log(getRanIP())
+
+	function loop2(){
+		for(var i=0;i<10;i++){
+			console.log(getRanIP())
+		}
+	}
+	console.log(loop2());
+
+	// 随机颜色
+	function getRanColor(){
+		var sqrt ='0123456789abcdefghijklmnoplrstuvwsyz';
+		var strColor='';
+		for(var i=1;i<7;i++){
+			strColor+=sqrt[Math.floor(Math.random()*36)]
+		}
+		return '#'+strColor;
+
+	}
+	var color =getRanColor();
+	console.log(color);
+	function loop3(){
+		for(var i=0;i<10;i++){
+			console.log(getRanColor())
+		}
+	}
+	console.log(loop3());
+
+
+</script>

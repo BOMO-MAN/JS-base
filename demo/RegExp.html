@@ -1,0 +1,27 @@
+<script>
+	//  /d 一个数字
+	//  /w 一个字符
+	//  /s 字符
+	//  /b
+	//  去除两端的空白字符
+	function trim(str) {
+		 return str.replace((/^\s+|\s+$/g),'')
+	}
+
+	// 判断邮箱
+	function isEmail(str) {
+		var reg =/[a-zA-Z0-9]+@.+/
+		return reg.test(str);
+	}
+
+	// 电话号码
+	function isPhoneNumber(str){
+		return /^1\d{10}$/.test(str);
+	}
+	// 
+	var str='3的平方是9'
+	str = str.replace(/\d+/g,function function_name(argument) {
+		// body...
+	})
+
+</script>

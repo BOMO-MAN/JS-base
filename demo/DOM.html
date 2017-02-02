@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM基础</title>
+</head>
+<body>
+<div class="mod-tabs">
+	<ul>
+		<li>list1</li>
+		<li>list2</li>
+		<li>list3</li>
+	</ul>
+	<button class="btn">点我</button>
+	
+</div>
+</body>
+<script>
+	var getNode=document.querySelectorAll('li') // 选择所有的li
+
+	var btn =document.querySelector('.btn')//获取类名为btn的元素
+	console.log(getNode);
+	console.log(btn);
+	btn.innerText="点我增加一个li";
+
+	var li =document.createElement('li');
+	
+
+
+	
+
+
+
+</script>
+
+</html>

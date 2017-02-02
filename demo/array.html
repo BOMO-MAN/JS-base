@@ -1,0 +1,170 @@
+<script>
+	// // 无参数构造，创建一个空数组
+	// var a1=new Array();
+
+	// // 一个数字参数构造函数，创建一个数字
+	// var a2 =new Array(5);
+
+	// // 带有初始化数据的构造函数，创建数组并初始化参数数据
+	// var a3 = new Array(4,"hello",new Date());
+
+	// // 使用方括号，创建空数组，等同于调用无参数构造函数
+	// var a4 =[];
+
+	// // 使用方括号，并传入初始化数据，等同于调用带有初始化数据的构造函数
+	// var a5=[10];
+
+	// // 
+	// var a1 = new Array(5);
+	// console.log(a1.length);
+	// console.log(a1);
+
+	// var a2=new Array(5,6);
+	// console.log(a2.length);
+	// console.log(a2);
+
+	// // 使用字面量，无论传入几个参数，都会把参数当作初始化内容
+	// var a1 =[5];
+	// console.log(a1.length);
+	// console.log(a1);
+
+	// var a2=[5,6];
+	// console.log(a2.length);
+	// console.log(a2);
+
+	// var a1=[1,2,3,];
+	// console.log(a1.length);
+	// console.log(a1);
+
+	// // 数组的索引与长度
+
+	// // 元素的增加/删除
+	// // 基本方法
+	// var a = new Array(1,2,3);
+	// a[3]=4;
+	// console.log(a);
+
+	// delete a[2];
+	// console.log(a[2]);
+
+	// // 栈方法    先入后出  push  pop
+	// var a=new Array(1,2,3);
+	// a.push(4);
+	// console.log(a);
+	// console.log(a.length);
+	// console.log(a.pop());
+	// console.log(a);
+	// console.log(a.length);
+	// a.pop();
+	// console.log(a);
+
+	// // 队列方法    先入先出 
+
+	// console.log('队列方法，先入先出')
+	// var a =new Array(1,2,3);
+	// a.unshift(4);
+	// console.log(a);
+
+	// console.log('2017.01.15')
+	// var oldArr=[1,2,3];
+	// oldArr.push('4');
+	// console.log(oldArr);
+
+	// oldArr.pop();
+	// console.log(oldArr);
+
+
+	// oldArr.shift();
+	// console.log(oldArr);
+
+	// oldArr.unshift('one');
+	// console.log(oldArr);
+
+
+
+	// var oldArr1=[1,2,3,4]
+	// oldArr1.join('|');
+	// oldArr1.join(' ');
+
+
+	// var str = '1234'
+	
+
+
+	// console.log(oldArr1)
+
+	//  不改变原数组
+	// function squareArr(arr){
+	// 	var newArr=[];
+	// 	for(i=0;i<arr.length;i++){
+
+	// 		newArr.push(arr[i]*arr[i]) 
+
+	// 	}
+	// 	return newArr;
+
+	// }
+	// var arr=[1,2,3]
+	// squareArr(arr)
+	// console.log(arr)
+	// console.log(squareArr(arr))
+	// // 改变原数组操作
+	 function squareArr(arr){
+	 		for(i=0;i<arr.length;i++){
+	 			
+	 			arr[i]*=arr[i]
+        
+    	}
+    	return arr;
+  	}
+    var arr=[1,2,3]
+    squareArr(arr)
+    console.log(arr)
+
+
+    // 写一个函数操作，返回新数组，挑整数，原数组不变，
+    function filterPositive(arr){
+    	var newarr=[];
+    	for(i=0;i<arr.length;i++){
+    		if(arr[i]>0&(arr[i]!=true))
+    		{
+    			newarr.push(arr[i]);
+    			
+    		}
+    	}
+    	return newarr;
+
+		}
+		var arr=[3,-1,2,'饥人谷',true]
+		var newArr=filterPositive(arr)
+		console.log(arr)
+		console.log(newArr);
+	 
+	
+
+ 
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
