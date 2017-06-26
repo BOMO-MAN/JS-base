@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件</title>
+	<style>
+		li {
+			list-style-type: none;
+			background: #fafafa;
+			border: 1px solid red;
+			margin-top: 4px;
+		}
+		li:hover {
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul class="ct">
+			<li>aa</li>
+			<li>bb</li>
+			<li>cc</li>
+			<li>dd</li>
+		</ul>
+	</div>
+	<input type="text" class="valueCt">
+	<input type="button" value="添加" class="btn">
+	<div class="showValue"></div>
+	
+	<script>
+		var ct = document.querySelector('.ct')
+		var lis = document.querySelectorAll('.ct>li')
+		var btn = document.querySelector('.btn')
+		var valueCt = document.querySelector('.valueCt')
+		var show = document.querySelector('.showValue')
+
+		btn.addEventListener('click',function(){
+				var node = document.createElement('li')
+				node.innerText = valueCt.value
+				ct.appendChild(node)
+		})
+		lis.forEach(function(item,index,arr){
+			item.addEventListener('click',function(){
+				show.innerText = item.innerText
+			},false)
+		})
+
+	</script>
+</body>
+</html>
